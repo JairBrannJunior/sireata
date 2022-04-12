@@ -29,7 +29,6 @@ public class AtaPublicadaView extends CustomComponent implements View {
 	private final VerticalLayout layout;
 	
 	public AtaPublicadaView() {
-		//this.setSizeFull();
 		this.layout = new VerticalLayout();
 		this.layout.setSizeFull();
 		this.layout.setSpacing(true);

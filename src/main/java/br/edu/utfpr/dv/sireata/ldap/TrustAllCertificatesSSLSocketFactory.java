@@ -29,7 +29,7 @@ public class TrustAllCertificatesSSLSocketFactory extends SocketFactory {
 			ctx.init(null, new TrustManager[] { new AllCertificatesTrustManager() }, new SecureRandom());
 			socketFactory = ctx.getSocketFactory();
 		} catch (Exception ex) {
-			ex.printStackTrace(System.err); /* handle exception */
+			ex.printStackTrace(System.err);
 		}
 	}
 

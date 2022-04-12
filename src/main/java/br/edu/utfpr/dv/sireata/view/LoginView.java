@@ -32,11 +32,11 @@ public class LoginView extends CustomComponent implements View {
 	private final Label info;
 	private final Label infoAluno;
 	private final Label infoServidor;
-    private final TextField user;
-    private final PasswordField password;
-    private final Button loginButton;
-    private final Panel panelLogin;
-    
+        private final TextField user;
+        private final PasswordField password;
+        private final Button loginButton;
+        private final Panel panelLogin;
+
     public LoginView(){
     	this.setCaption("SIREATA - Sistema de Registro de Atas");
     	this.setResponsive(true);
@@ -66,7 +66,6 @@ public class LoginView extends CustomComponent implements View {
     	this.password = new PasswordField("Senha");
     	this.password.setWidth("300px");
     	this.password.setInputPrompt("Informe sua senha");
-    	//this.password.setValue("");
     	this.password.setNullRepresentation("");
     	this.password.addStyleName(ValoTheme.TEXTFIELD_INLINE_ICON);
     	this.password.setIcon(FontAwesome.LOCK);

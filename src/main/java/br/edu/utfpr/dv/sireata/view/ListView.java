@@ -119,14 +119,12 @@ public abstract class ListView extends BasicView {
 		
 		this.hlGrid = new HorizontalLayout();
 		this.hlGrid.setSizeFull();
-		//this.hlGrid.setSpacing(true);
 		
 		this.setCaption("SIREATA - Sistema de Registro de Atas");
-    	this.setSizeFull();
+                this.setSizeFull();
 		VerticalLayout vl = new VerticalLayout(this.panelFiltros, this.hlGrid);
 		vl.setSizeFull();
 		vl.setExpandRatio(this.hlGrid, 1);
-		//vl.setSpacing(true);
 		this.setContent(vl);
     }
     

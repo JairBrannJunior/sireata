@@ -14,7 +14,6 @@ import br.edu.utfpr.dv.sireata.model.Ata;
 import br.edu.utfpr.dv.sireata.model.Comentario;
 import br.edu.utfpr.dv.sireata.model.Comentario.SituacaoComentario;
 import com.vaadin.ui.Component;
-import com.vaadin.ui.HorizontalLayout;
 import java.util.Arrays;
 import java.util.List;
 
