@@ -156,7 +156,7 @@ public class ReportUtils {
      */
     private JasperPrint fillReport(JasperReport jasperReport, List beanCollection){
         JasperPrint jasperPrint = null;
-        HashMap<String, Object> fillParameters = new HashMap<String, Object>();
+        HashMap<String, Object> fillParameters = new HashMap<>();
         
         try {
             jasperPrint = JasperFillManager.fillReport(jasperReport, fillParameters, new JRBeanCollectionDataSource(beanCollection));

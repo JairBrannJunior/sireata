@@ -22,8 +22,8 @@ public class AtaReport {
 		this.setNumero("");
 		this.setDataHora("");
 		this.setLocal("");
-		this.setParticipantesMembros(new ArrayList<ParticipanteReport>());
-		this.setDemaisParticipantes(new ArrayList<ParticipanteReport>());
+		this.setParticipantesMembros(new ArrayList<>());
+		this.setDemaisParticipantes(new ArrayList<>());
 		this.setPresidente("");
 		this.setSecretario("");
 		this.setTexto("");

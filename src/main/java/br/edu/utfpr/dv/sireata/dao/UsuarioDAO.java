@@ -91,7 +91,7 @@ public class UsuarioDAO {
 			stmt = conn.createStatement();
 		
 			rs = stmt.executeQuery("SELECT * FROM usuarios WHERE login <> 'admin' " + (apenasAtivos ? " AND ativo = 1 " : "") + " ORDER BY nome");
-			List<Usuario> list = new ArrayList<Usuario>();
+			List<Usuario> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));			
@@ -122,7 +122,7 @@ public class UsuarioDAO {
 			}
 			
 			rs = stmt.executeQuery();
-			List<Usuario> list = new ArrayList<Usuario>();
+			List<Usuario> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -203,7 +203,7 @@ public class UsuarioDAO {
 		}
 		
 		if(sql != ""){
-			List<String> emails = new ArrayList<String>();
+			List<String> emails = new ArrayList<>();
 			Connection conn = null;
 			Statement stmt = null;
 			ResultSet rs = null;

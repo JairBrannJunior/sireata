@@ -46,7 +46,7 @@ public class PautaDAO {
 		
 			rs = stmt.executeQuery("SELECT * FROM pautas WHERE idAta=" + String.valueOf(idAta) + " ORDER BY ordem");
 		
-			List<Pauta> list = new ArrayList<Pauta>();
+			List<Pauta> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

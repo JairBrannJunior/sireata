@@ -131,7 +131,7 @@ public class LdapUtils {
 	 * @return
 	 */
 	private Hashtable<String, Object> createNoUserLdapProperties(String url) {
-		Hashtable<String, Object> env = new Hashtable<String, Object>(11);
+		Hashtable<String, Object> env = new Hashtable<>(11);
 
 		env.put(Context.INITIAL_CONTEXT_FACTORY, "com.sun.jndi.ldap.LdapCtxFactory");
 		env.put(Context.PROVIDER_URL, url);
@@ -229,7 +229,7 @@ public class LdapUtils {
 	 * @throws NamingException
 	 */
 	public Map<String, String> getAllUsers(String uidVar) throws NamingException {
-		Map<String, String> map = new HashMap<String, String>();
+		Map<String, String> map = new HashMap<>();
 
 		NamingEnumeration<SearchResult> enumResult = null;
 		DirContext dirContext = null;
@@ -340,7 +340,7 @@ public class LdapUtils {
 	 * @throws NamingException
 	 */
 	public List<String> getLdapOuByUid(String uid, String baseDn) throws NamingException {
-		List<String> ouList = new ArrayList<String>();
+		List<String> ouList = new ArrayList<>();
 		String split[];
 
 		baseDn = baseDn.trim().toUpperCase();
@@ -368,7 +368,7 @@ public class LdapUtils {
 	 */
 	@SuppressWarnings("rawtypes")
 	public Map<String, String> getLdapProperties(String uid) throws NamingException {
-		Map<String, String> mapa = new HashMap<String, String>();
+		Map<String, String> mapa = new HashMap<>();
 
 		String url = this.getUrl() + "/" + this.basedn;
 
@@ -424,7 +424,7 @@ public class LdapUtils {
 	 */
 	@SuppressWarnings("rawtypes")
 	public List<String> getAllLdapUidInfo() throws NamingException {
-		List<String> mapa = new ArrayList<String>();
+		List<String> mapa = new ArrayList<>();
 
 		String url = this.getUrl() + "/" + this.basedn;
 
@@ -480,7 +480,7 @@ public class LdapUtils {
 	 */
 	@SuppressWarnings("rawtypes")
 	public List<String> getAllLdapInfo(String uidVar) throws NamingException {
-		List<String> mapa = new ArrayList<String>();
+		List<String> mapa = new ArrayList<>();
 
 		String url = this.getUrl() + "/" + this.basedn;
 

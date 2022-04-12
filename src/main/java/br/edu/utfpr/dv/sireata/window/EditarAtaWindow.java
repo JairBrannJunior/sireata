@@ -420,7 +420,7 @@ public class EditarAtaWindow extends EditarWindow {
 			this.btBloquearComentarios.setVisible(this.ata.isAceitarComentarios());
 			
 			try{
-				List<AtaReport> list = new ArrayList<AtaReport>();
+				List<AtaReport> list = new ArrayList<>();
 				AtaBO bo = new AtaBO();
 				
 				if(!bo.isPresidenteOuSecretario(Session.getUsuario().getIdUsuario(), this.ata.getIdAta())){
@@ -518,7 +518,7 @@ public class EditarAtaWindow extends EditarWindow {
 	}
 	
 	private void carregarMembrosOrgao(){
-		this.ata.setParticipantes(new ArrayList<AtaParticipante>());
+		this.ata.setParticipantes(new ArrayList<>());
 		
 		try {
 			OrgaoBO bo = new OrgaoBO();
@@ -560,7 +560,7 @@ public class EditarAtaWindow extends EditarWindow {
 		
 		if(this.ata.getParticipantes() == null){
 			if(this.ata.getIdAta() == 0){
-				this.ata.setParticipantes(new ArrayList<AtaParticipante>());
+				this.ata.setParticipantes(new ArrayList<>());
 			}else{
 				try {
 					AtaParticipanteBO bo = new AtaParticipanteBO();
@@ -592,7 +592,7 @@ public class EditarAtaWindow extends EditarWindow {
 		
 		if(this.ata.getAnexos() == null){
 			if(this.ata.getIdAta() == 0){
-				this.ata.setAnexos(new ArrayList<Anexo>());
+				this.ata.setAnexos(new ArrayList<>());
 			}else{
 				try {
 					AnexoBO bo = new AnexoBO();
@@ -641,7 +641,7 @@ public class EditarAtaWindow extends EditarWindow {
 		
 		if(this.ata.getPauta() == null){
 			if(this.ata.getIdAta() == 0){
-				this.ata.setPauta(new ArrayList<Pauta>());
+				this.ata.setPauta(new ArrayList<>());
 			}else{
 				try {
 					PautaBO bo = new PautaBO();

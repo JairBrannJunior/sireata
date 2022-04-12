@@ -27,7 +27,7 @@ public class AtaService {
 	public Response listar(@PathParam("orgao") int idOrgao) {
 		try {
 			List<Ata> list = new AtaBO().listarPorOrgao(idOrgao);
-			List<AtaJson> ret = new ArrayList<AtaJson>();
+			List<AtaJson> ret = new ArrayList<>();
 			
 			for(Ata a : list) {
 				AtaJson ata = new AtaJson();

@@ -154,7 +154,7 @@ public class AtaDAO {
 					(idOrgao > 0 ? " AND atas.idOrgao = " + String.valueOf(idOrgao) : "") +
 					"ORDER BY atas.data DESC");
 			
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -182,7 +182,7 @@ public class AtaDAO {
 				"INNER JOIN usuarios s ON s.idUsuario=atas.idSecretario " +
 				"WHERE atas.publicada=1 ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -210,7 +210,7 @@ public class AtaDAO {
 				"INNER JOIN usuarios s ON s.idUsuario=atas.idSecretario " +
 				"WHERE atas.publicada=1 AND atas.idOrgao=" + String.valueOf(idOrgao) + " ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -238,7 +238,7 @@ public class AtaDAO {
 				"INNER JOIN usuarios s ON s.idUsuario=atas.idSecretario " +
 				"WHERE atas.publicada=1 AND Orgaos.idDepartamento=" + String.valueOf(idDepartamento) + " ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -266,7 +266,7 @@ public class AtaDAO {
 				"INNER JOIN usuarios s ON s.idUsuario=atas.idSecretario " +
 				"WHERE atas.publicada=1 AND departamentos.idCampus=" + String.valueOf(idCampus) + " ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -295,7 +295,7 @@ public class AtaDAO {
 				"INNER JOIN ataparticipantes ON ataparticipantes.idAta=atas.idAta " +
 				"WHERE atas.publicada=0 AND ataparticipantes.idUsuario=" + String.valueOf(idUsuario) +" ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -324,7 +324,7 @@ public class AtaDAO {
 				"INNER JOIN ataparticipantes ON ataparticipantes.idAta=atas.idAta " +
 				"WHERE atas.publicada=0 AND ataparticipantes.idUsuario=" + String.valueOf(idUsuario) + " AND atas.idOrgao=" + String.valueOf(idOrgao) + " ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -353,7 +353,7 @@ public class AtaDAO {
 				"INNER JOIN ataparticipantes ON ataparticipantes.idAta=atas.idAta " +
 				"WHERE atas.publicada=0 AND ataparticipantes.idUsuario=" + String.valueOf(idUsuario) + " AND Orgaos.idDepartamento=" + String.valueOf(idDepartamento) + " ORDER BY atas.data DESC");
 			
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -382,7 +382,7 @@ public class AtaDAO {
 				"INNER JOIN ataparticipantes ON ataparticipantes.idAta=atas.idAta " +
 				"WHERE atas.publicada=0 AND ataparticipantes.idUsuario=" + String.valueOf(idUsuario) + " AND departamentos.idCampus=" + String.valueOf(idCampus) + " ORDER BY atas.data DESC");
 		
-			List<Ata> list = new ArrayList<Ata>();
+			List<Ata> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

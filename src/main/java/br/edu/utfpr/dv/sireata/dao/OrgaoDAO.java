@@ -57,7 +57,7 @@ public class OrgaoDAO {
 				"INNER JOIN usuarios s ON s.idusuario=orgaos.idsecretario " +
 				(apenasAtivos ? " WHERE orgaos.ativo=1" : "") + " ORDER BY orgaos.nome");
 		
-			List<Orgao> list = new ArrayList<Orgao>();
+			List<Orgao> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -87,7 +87,7 @@ public class OrgaoDAO {
 			
 			rs = stmt.executeQuery();
 			
-			List<Orgao> list = new ArrayList<Orgao>();
+			List<Orgao> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -117,7 +117,7 @@ public class OrgaoDAO {
 			
 			rs = stmt.executeQuery();
 			
-			List<Orgao> list = new ArrayList<Orgao>();
+			List<Orgao> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -145,7 +145,7 @@ public class OrgaoDAO {
 				"WHERE orgaos.ativo=1 AND orgaos.idDepartamento=" + String.valueOf(idDepartamento) + " AND (orgaos.idPresidente=" + String.valueOf(idUsuario) + " OR orgaos.idSecretario=" + String.valueOf(idUsuario) + 
 				") ORDER BY orgaos.nome");
 		
-			List<Orgao> list = new ArrayList<Orgao>();
+			List<Orgao> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -175,7 +175,7 @@ public class OrgaoDAO {
 				"WHERE atas.publicada=0 AND ataParticipantes.presente=1 AND orgaos.idDepartamento=" + String.valueOf(idDepartamento) + " AND ataParticipantes.idUsuario=" + String.valueOf(idUsuario) + 
 				" ORDER BY orgaos.nome");
 		
-			List<Orgao> list = new ArrayList<Orgao>();
+			List<Orgao> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

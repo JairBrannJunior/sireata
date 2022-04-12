@@ -50,7 +50,7 @@ public class AtaParticipanteDAO {
 				"INNER JOIN usuarios ON usuarios.idUsuario=ataparticipantes.idUsuario " + 
 				"WHERE idAta=" + String.valueOf(idAta) + " ORDER BY usuarios.nome");
 		
-			List<AtaParticipante> list = new ArrayList<AtaParticipante>();
+			List<AtaParticipante> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

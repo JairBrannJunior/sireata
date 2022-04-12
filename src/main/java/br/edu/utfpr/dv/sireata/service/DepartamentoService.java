@@ -25,7 +25,7 @@ public class DepartamentoService {
 	public Response listar(@PathParam("campus") int idCampus) {
 		try {
 			List<Departamento> list = new DepartamentoBO().listarPorCampus(idCampus, true);
-			List<DepartamentoJson> ret = new ArrayList<DepartamentoJson>();
+			List<DepartamentoJson> ret = new ArrayList<>();
 			
 			for(Departamento d : list) {
 				DepartamentoJson departamento = new DepartamentoJson();

@@ -48,7 +48,7 @@ public class AnexoDAO {
 			rs = stmt.executeQuery("SELECT anexos.* FROM anexos " +
 				"WHERE idAta=" + String.valueOf(idAta) + " ORDER BY anexos.ordem");
 		
-			List<Anexo> list = new ArrayList<Anexo>();
+			List<Anexo> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

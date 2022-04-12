@@ -79,7 +79,7 @@ public class DepartamentoDAO {
 				"FROM departamentos INNER JOIN campus ON campus.idCampus=departamentos.idCampus " + 
 				(apenasAtivos ? " WHERE departamentos.ativo=1" : "") + " ORDER BY departamentos.nome");
 		
-			List<Departamento> list = new ArrayList<Departamento>();
+			List<Departamento> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -104,7 +104,7 @@ public class DepartamentoDAO {
 				"FROM departamentos INNER JOIN campus ON campus.idCampus=departamentos.idCampus " +
 				"WHERE departamentos.idCampus=" + String.valueOf(idCampus) + (apenasAtivos ? " AND departamentos.ativo=1" : "") + " ORDER BY departamentos.nome");
 		
-			List<Departamento> list = new ArrayList<Departamento>();
+			List<Departamento> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -131,7 +131,7 @@ public class DepartamentoDAO {
 				"WHERE departamentos.ativo=1 AND departamentos.idCampus=" + String.valueOf(idCampus) + " AND (orgaos.idPresidente=" + String.valueOf(idUsuario) + " OR orgaos.idSecretario=" + String.valueOf(idUsuario) + 
 				") ORDER BY departamentos.nome");
 		
-			List<Departamento> list = new ArrayList<Departamento>();
+			List<Departamento> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -160,7 +160,7 @@ public class DepartamentoDAO {
 				"WHERE atas.publicada=0 AND ataParticipantes.presente=1 AND departamentos.idCampus=" + String.valueOf(idCampus) + " AND ataParticipantes.idUsuario=" + String.valueOf(idUsuario) + 
 				" ORDER BY departamentos.nome");
 		
-			List<Departamento> list = new ArrayList<Departamento>();
+			List<Departamento> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

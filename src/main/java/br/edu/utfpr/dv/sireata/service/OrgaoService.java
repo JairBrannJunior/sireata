@@ -25,7 +25,7 @@ public class OrgaoService {
 	public Response listar(@PathParam("departamento") int idDepartamento) {
 		try {
 			List<Orgao> list = new OrgaoBO().listarPorDepartamento(idDepartamento);
-			List<OrgaoJson> ret = new ArrayList<OrgaoJson>();
+			List<OrgaoJson> ret = new ArrayList<>();
 			
 			for(Orgao o : list) {
 				OrgaoJson orgao = new OrgaoJson();

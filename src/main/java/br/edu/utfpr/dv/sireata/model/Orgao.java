@@ -24,7 +24,7 @@ public class Orgao {
 		this.setNomeCompleto("");
 		this.setDesignacaoPresidente("");
 		this.setAtivo(true);
-		this.setMembros(new ArrayList<OrgaoMembro>());
+		this.setMembros(new ArrayList<>());
 	}
 	
 	public int getIdOrgao() {

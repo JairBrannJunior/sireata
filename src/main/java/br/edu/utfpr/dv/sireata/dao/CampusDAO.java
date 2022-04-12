@@ -70,7 +70,7 @@ public class CampusDAO {
 		
 			rs = stmt.executeQuery("SELECT * FROM campus " + (apenasAtivos ? " WHERE ativo=1" : "") + " ORDER BY nome");
 		
-			List<Campus> list = new ArrayList<Campus>();
+			List<Campus> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -97,7 +97,7 @@ public class CampusDAO {
 				"WHERE campus.ativo=1 AND (orgaos.idPresidente=" + String.valueOf(idUsuario) + " OR orgaos.idSecretario=" + String.valueOf(idUsuario) + 
 				") ORDER BY campus.nome");
 		
-			List<Campus> list = new ArrayList<Campus>();
+			List<Campus> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));
@@ -126,7 +126,7 @@ public class CampusDAO {
 				"WHERE atas.publicada=0 AND ataParticipantes.presente=1 AND ataParticipantes.idUsuario=" + String.valueOf(idUsuario) + 
 				" ORDER BY campus.nome");
 		
-			List<Campus> list = new ArrayList<Campus>();
+			List<Campus> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

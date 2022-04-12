@@ -72,7 +72,7 @@ public class ComentarioDAO {
 				"INNER JOIN usuarios ON usuarios.idUsuario=comentarios.idUsuario " +
 				"WHERE comentarios.idPauta=" + String.valueOf(idPauta) + " ORDER BY usuarios.nome");
 		
-			List<Comentario> list = new ArrayList<Comentario>();
+			List<Comentario> list = new ArrayList<>();
 			
 			while(rs.next()){
 				list.add(this.carregarObjeto(rs));

@@ -422,7 +422,7 @@ public class AtaBO {
 		try{
 			AtaReport report = this.gerarAtaReport(idAta);
 			
-			List<AtaReport> list = new ArrayList<AtaReport>();
+			List<AtaReport> list = new ArrayList<>();
 			list.add(report);
 			
 			ByteArrayOutputStream pdf = new ReportUtils().createPdfStream(list, "Ata");
